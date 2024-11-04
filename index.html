@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfolio | Web Dev</title>
+
+    <link rel="stylesheet" href="./css/main.css" />
+    <link
+      rel="shortcut icon"
+      href="./img/global-research_9955682.png"
+      type="image/x-icon"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    />
+  </head>
+  <body id="root">
+    <div class="cursor-wrapper default">
+      <div id="circle" class="secondary-cursor"></div>
+    </div>
+    <div class="app light" style="visibility: visible">
+      <div class="container-fullhd">
+        <main class="main grid-container">
+          <div class="content">
+            <header class="header">
+              <div class="header_pannel">
+                <div class="swithlang">
+                  <button
+                    class="swithlang_btn"
+                    id="lang-eng"
+                    onclick="setLanguage('en', this)"
+                  >
+                    Eng</button
+                  ><button
+                    class="swithlang_btn"
+                    id="lang-ua"
+                    onclick="setLanguage('ua', this)"
+                  >
+                    Ua</button
+                  ><button
+                    class="swithlang_btn"
+                    id="lang-ru"
+                    onclick="setLanguage('ru', this)"
+                  >
+                    Rus
+                  </button>
+                </div>
+                <div class="switch-style">
+                  <div class="button-switch" id="switcher">
+                    <svg
+                      class="switch"
+                      width="24"
+                      height="30"
+                      viewBox="0 0 26 46"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <rect
+                        x="1.5"
+                        y="1.5"
+                        width="23"
+                        height="43"
+                        rx="11.5"
+                        stroke="var(--text-color)"
+                        stroke-width="2"
+                      />
+                      <circle cx="13" cy="33" r="6" fill="var(--text-color)" />
+                    </svg>
+                  </div>
+                </div>
+              </div>
+              <div class="header_category">
+                <div class="catportfolio">
+                  <button id="showWorks" class="catportfolio_btn btncat active">
+                    <i class="fa fa-briefcase"> </i> Все работы
+                  </button>
+                  <button id="showForms" class="catportfolio_btn btncat">
+                    <i class="fa fa-table"> </i> Формы и темы
+                  </button>
+                </div>
+              </div>
+            </header>
+            <div class="content_block">
+              <h1 class="title" id="greeting">Hello world.</h1>
+              <div class="intro">
+                <span class="title-text" id="intro">My name is</span>
+                <span class="title_name" id="name">Anatoliy.</span>
+              </div>
+              <div>
+                <span class="typed-text" id="profession"></span>
+                <span class="cursor"></span>
+              </div>
+              <p class="discrip" id="description">
+                I work with entrepreneurs and company managers who want to find
+                new clients, present themselves as a modern and successful
+                company, use a new type of advertising, or simply update their
+                old website with a design from the 90s.
+              </p>
+            </div>
+            <marquee class="marq-text" behavior="" direction="top"
+              >Portfolio</marquee
+            >
+          </div>
+          <div class="portfolio">
+            <ul class="works">
+              <li class="card work">
+                <span
+                  class="card_preview lazy-load-image-background blur lazy-load-image-loaded"
+                >
+                  <img
+                    src="./img/audio-bg.jpg"
+                    alt=""
+                    width="100%"
+                    height="100%"
+                  />
+                </span>
+                <div class="card_back">
+                  <div class="card_type">Mobile & Desktop version</div>
+                  <h3 class="card_title">AirPodsMax</h3>
+                  <a
+                    href="https://tretiakovanat.github.io/19-AirPodc-Max/"
+                    target="_blank"
+                    class="card_link"
+                    >See work</a
+                  >
+                </div>
+              </li>
+
+              <li class="card work">
+                <span
+                  class="card_preview lazy-load-image-background blur lazy-load-image-loaded"
+                >
+                  <img
+                    src="./img/lamba.png"
+                    alt=""
+                    width="100%"
+                    height="100%"
+                  />
+                </span>
+                <div class="card_back">
+                  <div class="card_type">Desktop version</div>
+                  <h3 class="card_title">Lamborghini</h3>
+                  <a
+                    href="https://tretiakovanat.github.io/Lamba/"
+                    target="_blank"
+                    class="card_link"
+                    >See work</a
+                  >
+                </div>
+              </li>
+              <li class="card work">
+                <span
+                  class="card_preview lazy-load-image-background blur lazy-load-image-loaded"
+                >
+                  <img
+                    src="./img/content.webp"
+                    alt=""
+                    width="100%"
+                    height="100%"
+                  />
+                </span>
+                <div class="card_back">
+                  <div class="card_type">Mobile & Desktop version</div>
+                  <h3 class="card_title">Content Creator</h3>
+                  <a
+                    href="https://content-creator.space/"
+                    target="_blank"
+                    class="card_link"
+                    >See work</a
+                  >
+                </div>
+              </li>
+              <li class="card work">
+                <span
+                  class="card_preview lazy-load-image-background blur lazy-load-image-loaded"
+                >
+                  <img src="./img/swip.jpg" alt="" width="100%" height="100%" />
+                </span>
+                <div class="card_back">
+                  <div class="card_type">Mobile & Desktop version</div>
+                  <h3 class="card_title">Header Swiper</h3>
+                  <a
+                    href="https://tretiakovanat.github.io/Header-Swiper/"
+                    target="_blank"
+                    class="card_link"
+                    >See work</a
+                  >
+                </div>
+              </li>
+              <li class="card work">
+                <span
+                  class="card_preview lazy-load-image-background blur lazy-load-image-loaded"
+                >
+                  <img src="./img/menu.jpg" alt="" width="100%" height="100%" />
+                </span>
+                <div class="card_back">
+                  <div class="card_type">Mobile & Desktop version</div>
+                  <h3 class="card_title">Menu</h3>
+                  <a
+                    href="https://tretiakovanat.github.io/Thailand-rest"
+                    target="_blank"
+                    class="card_link"
+                    >See work</a
+                  >
+                </div>
+              </li>
+
+              <li class="card work">
+                <span
+                  class="card_preview lazy-load-image-background blur lazy-load-image-loaded"
+                >
+                  <img
+                    src="./img/furni.png"
+                    alt=""
+                    width="100%"
+                    height="100%"
+                  />
+                </span>
+                <div class="card_back">
+                  <div class="card_type">Desktop version</div>
+                  <h3 class="card_title">Furni</h3>
+                  <a
+                    href="https://tretiakovanat.github.io/Furni/"
+                    target="_blank"
+                    class="card_link"
+                    >See work</a
+                  >
+                </div>
+              </li>
+              <li class="card work">
+                <span
+                  class="card_preview lazy-load-image-background blur lazy-load-image-loaded"
+                >
+                  <img src="./img/img.jpg" alt="" width="100%" height="100%" />
+                </span>
+                <div class="card_back">
+                  <div class="card_type">Desktop version</div>
+                  <h3 class="card_title">Travel agent</h3>
+                  <a
+                    href="https://tretiakovanat.github.io/Travel-Agent/"
+                    target="_blank"
+                    class="card_link"
+                    >See work</a
+                  >
+                </div>
+              </li>
+              <li class="card work">
+                <span
+                  class="card_preview lazy-load-image-background blur lazy-load-image-loaded"
+                >
+                  <img
+                    src="./img/logoips.jpg"
+                    alt=""
+                    width="100%"
+                    height="100%"
+                  />
+                </span>
+                <div class="card_back">
+                  <div class="card_type">Desktop version</div>
+                  <h3 class="card_title">Innovative Investment Platform</h3>
+                  <a
+                    href="https://tretiakovanat.github.io/Innovative-Investment-Platform/"
+                    target="_blank"
+                    class="card_link"
+                    >See work</a
+                  >
+                </div>
+              </li>
+              <li class="card work">
+                <span
+                  class="card_preview lazy-load-image-background blur lazy-load-image-loaded"
+                >
+                  <img
+                    src="./img/resto.jpg"
+                    alt=""
+                    width="100%"
+                    height="100%"
+                  />
+                </span>
+                <div class="card_back">
+                  <div class="card_type">Desktop version</div>
+                  <h3 class="card_title">Restaurant</h3>
+                  <a
+                    href="https://tretiakovanat.github.io/Restaurant/"
+                    target="_blank"
+                    class="card_link"
+                    >See work</a
+                  >
+                </div>
+              </li>
+              <li class="card work">
+                <span
+                  class="card_preview lazy-load-image-background blur lazy-load-image-loaded"
+                >
+                  <img src="./img/tea.jpg" alt="" width="100%" height="100%" />
+                </span>
+                <div class="card_back">
+                  <div class="card_type">Mobile & Desktop version</div>
+                  <h3 class="card_title">Tea Shop</h3>
+                  <a
+                    href="https://tretiakovanat.github.io/21-Tea-Shop/"
+                    target="_blank"
+                    class="card_link"
+                    >See work</a
+                  >
+                </div>
+              </li>
+              <li class="card work">
+                <span
+                  class="card_preview lazy-load-image-background blur lazy-load-image-loaded"
+                >
+                  <img
+                    src="./img/service.png"
+                    alt=""
+                    width="100%"
+                    height="100%"
+                  />
+                </span>
+                <div class="card_back">
+                  <div class="card_type">Desktop version</div>
+                  <h3 class="card_title">Home service</h3>
+                  <a
+                    href="https://tretiakovanat.github.io/HomeService/"
+                    target="_blank"
+                    class="card_link"
+                    >See work</a
+                  >
+                </div>
+              </li>
+              <li class="card work">
+                <span
+                  class="card_preview lazy-load-image-background blur lazy-load-image-loaded"
+                >
+                  <img
+                    src="./img/photo_2024-10-17_11-19-25.jpg"
+                    alt=""
+                    width="100%"
+                    height="100%"
+                  />
+                </span>
+                <div class="card_back">
+                  <div class="card_type">Mobile & Desktop version</div>
+                  <h3 class="card_title">Portfolio</h3>
+                  <a
+                    href="https://tretiakovanat.github.io/Portfolio/"
+                    target="_blank"
+                    class="card_link"
+                    >See work</a
+                  >
+                </div>
+              </li>
+              <li class="card work">
+                <span
+                  class="card_preview lazy-load-image-background blur lazy-load-image-loaded"
+                >
+                  <img src="./img/shop.jpg" alt="" width="100%" height="100%" />
+                </span>
+                <div class="card_back">
+                  <div class="card_type">Desktop version</div>
+                  <h3 class="card_title">Shop React</h3>
+                  <a href="#" target="_blank" class="card_link"></a>
+                </div>
+              </li>
+              <li class="card form">
+                <span
+                  class="card_preview lazy-load-image-background blur lazy-load-image-loaded"
+                >
+                  <img
+                    src="./img/form/1.jpg"
+                    alt=""
+                    width="100%"
+                    height="100%"
+                  />
+                </span>
+                <div class="card_back">
+                  <div class="card_type">Form</div>
+                  <h3 class="card_title">Login & Sing Up</h3>
+                  <a
+                    href="https://tretiakovanat.github.io/Login-and-Reg/"
+                    target="_blank"
+                    class="card_link"
+                    >See work</a
+                  >
+                </div>
+              </li>
+              <li class="card form">
+                <span
+                  class="card_preview lazy-load-image-background blur lazy-load-image-loaded"
+                >
+                  <img
+                    src="./img/form/04.jpg"
+                    alt=""
+                    width="100%"
+                    height="100%"
+                  />
+                </span>
+                <div class="card_back">
+                  <div class="card_type">Form</div>
+                  <h3 class="card_title">Login form</h3>
+                  <a
+                    href="https://tretiakovanat.github.io/Login-form/"
+                    target="_blank"
+                    class="card_link"
+                    >See work</a
+                  >
+                </div>
+              </li>
+              <li class="card work">
+                <span
+                  class="card_preview lazy-load-image-background blur lazy-load-image-loaded"
+                >
+                  <img
+                    src="./img/Service-1.png"
+                    alt=""
+                    width="100%"
+                    height="100%"
+                  />
+                </span>
+                <div class="card_back">
+                  <div class="card_type">Desktop version</div>
+                  <h3 class="card_title">Lidia</h3>
+                  <a
+                    href="https://tretiakovanat.github.io/Lidia/"
+                    target="_blank"
+                    class="card_link"
+                    >See work</a
+                  >
+                </div>
+              </li>
+            </ul>
+          </div>
+        </main>
+      </div>
+    </div>
+
+    <script src="./js/script.js"></script>
+  </body>
+</html>

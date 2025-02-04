@@ -10,7 +10,6 @@
 }
 
 .typed-text {
-  
   font-size: 30px;
   font-weight: 700;
   white-space: nowrap;
@@ -20,10 +19,9 @@
 
 @media (max-width: 480px) {
   .typed-text {
-    
     font-size: 16px;
   }
-  .marq-text{
+  .marq-text {
     width: 100%;
     font-size: 20px;
   }
@@ -63,7 +61,7 @@
 }
 
 @media (max-width: 480px) {
-  .switch{
+  .switch {
     right: 10px;
   }
 }
@@ -85,11 +83,10 @@
   cursor: pointer;
 }
 
-.active{
-   color: #f14c4c;
+.active {
+  color: #f14c4c;
   pointer-events: none;
 }
-
 
 .themetoggle {
   position: relative;
@@ -196,7 +193,6 @@
     flex-direction: column;
     align-items: flex-start;
     row-gap: 22px;
-    
   }
 
   .header_pannel {
@@ -294,21 +290,19 @@
 .title_name {
   position: relative;
   display: inline-block;
-  
+
   color: var(--text-color);
   text-shadow: 0 0 10px rgba(63, 63, 63, 0.56), 0 0 20px rgba(63, 63, 63, 0.56),
     0 0 30px rgba(63, 63, 63, 0.56), 0 0 40px rgba(63, 63, 63, 0.56);
   z-index: 13;
 }
 
-.intro{
+.intro {
   display: flex;
   gap: 15px;
   align-items: center;
   font-size: 60px;
   font-weight: 700;
-
-
 }
 
 /* .title_name:before {
@@ -633,9 +627,8 @@
   .title {
     font-size: 48px;
   }
-  .intro{
+  .intro {
     font-size: 40px;
-
   }
   .suptitle {
     font-size: 34px;
@@ -646,9 +639,8 @@
   .title {
     font-size: 45px;
   }
-  .intro{
+  .intro {
     font-size: 40px;
-
   }
 
   .suptitle {
@@ -665,9 +657,8 @@
   .title {
     font-size: 40px;
   }
-  .intro{
+  .intro {
     font-size: 30px;
-
   }
 
   .title img {
@@ -684,9 +675,8 @@
     font-size: 40px;
     margin-top: 50px;
   }
-  .typed-text{
+  .typed-text {
     font-size: 30px;
-
   }
   .suptitle {
     font-size: 37px;
@@ -697,9 +687,8 @@
   .suptitle {
     font-size: 34px;
   }
-  .typed-text{
+  .typed-text {
     font-size: 20px;
-
   }
 }
 
@@ -709,9 +698,8 @@
     font-size: 50px;
     margin-top: 20px;
   }
-  .intro{
+  .intro {
     font-size: 40px;
-
   }
 
   .title_name {
@@ -726,13 +714,11 @@
 
 @media (max-width: 480px) {
   .title {
-    margin: 60px 0 0 0 ;
+    margin: 60px 0 0 0;
     font-size: 36px;
-
   }
-  .title-text{
+  .title-text {
     font-size: 30px;
-
   }
   .title_name {
     font-size: 30px;
@@ -1296,6 +1282,7 @@ button {
   align-items: flex-start;
   justify-content: center;
   padding: 30px;
+  
 }
 
 .content_block {
@@ -1359,8 +1346,6 @@ button {
     grid-template-areas: "." ".";
   }
 
-  
-
   .portfolio {
     height: auto;
     overflow-x: hidden;
@@ -1371,4 +1356,34 @@ button {
   .content {
     padding: 25px;
   }
+}
+
+.draw-box {
+  
+  svg{
+    width: 100%;
+  }
+}
+
+path {
+  width: 100%;
+  stroke: #000;
+  stroke-width: 4;
+  stroke-dasharray: 9100;
+  stroke-dashoffset: 9100;
+  animation: draw 12s linear infinite;
+}
+
+@keyframes draw {
+  100% {
+    stroke-dashoffset: 0;
+  }
+}
+
+@media ( min-width: 462px) and ( max-width: 1024px) {
+  .draw-box{
+    display: none;
+    opacity: 0.3;
+  }
+
 }

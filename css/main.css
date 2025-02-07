@@ -1377,13 +1377,14 @@ path {
 @keyframes draw {
   100% {
     stroke-dashoffset: 0;
+    fill: #000;
   }
 }
 
 @media ( min-width: 462px) and ( max-width: 1024px) {
   .draw-box{
     display: none;
-    opacity: 0.3;
+    
   }
 
 }

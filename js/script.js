@@ -109,7 +109,7 @@ const translations = {
   en: {
     greeting: "Hello world.",
     intro: "My name is ",
-    name:"Anatoliy.",
+    name: "Anatoliy.",
     description:
       "I work with entrepreneurs and company managers who want to find new clients, present themselves as a modern and successful company, use a new type of advertising, or simply update their old website with a design.",
   },
@@ -131,28 +131,39 @@ const translations = {
 const switchLangButtons = document.querySelectorAll(".swithlang_btn");
 
 function setLanguage(lang, activeButton) {
-  switchLangButtons.forEach((button) => button.classList.remove("is-active"))
+  switchLangButtons.forEach((button) => button.classList.remove("is-active"));
   activeButton = activeButton.classList.add("is-active");
 
   // Обновление текста на странице в зависимости от выбранного языка
   document.getElementById("greeting").textContent = translations[lang].greeting;
   document.getElementById("intro").textContent = translations[lang].intro;
   document.getElementById("name").textContent = translations[lang].name;
-  document.getElementById("profession").textContent = translations[lang].profession;
-  document.getElementById("description").textContent = translations[lang].description;
+  document.getElementById("profession").textContent =
+    translations[lang].profession;
+  document.getElementById("description").textContent =
+    translations[lang].description;
 
   // Сохранение выбранного языка в localStorage для сохранения состояния
-  localStorage.setItem('preferredLanguage', lang);
+  localStorage.setItem("preferredLanguage", lang);
 }
 
 // Проверка сохраненного языка при загрузке страницы
 document.addEventListener("DOMContentLoaded", () => {
-  const savedLanguage = localStorage.getItem('preferredLanguage') || 'en';
-  const activeButton = Array.from(switchLangButtons).find(button => button.textContent.toLowerCase() === savedLanguage);
-  
+  const savedLanguage = localStorage.getItem("preferredLanguage") || "en";
+  const activeButton = Array.from(switchLangButtons).find(
+    (button) => button.textContent.toLowerCase() === savedLanguage
+  );
+
   if (activeButton) {
     setLanguage(savedLanguage, activeButton);
   } else {
-    setLanguage('en', switchLangButtons[0]); // По умолчанию английский
+    setLanguage("en", switchLangButtons[0]); // По умолчанию английский
   }
+});
+
+window.addEventListener("load", () => {
+  setTimeout(() => {
+    document.getElementById("preloader").style.display = "none";
+    document.getElementById("root").style.display = "block";
+  }, 1500); // 3 секунды
 });

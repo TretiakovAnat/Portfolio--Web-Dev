@@ -161,9 +161,19 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 });
 
-window.addEventListener("load", () => {
-  setTimeout(() => {
-    document.getElementById("preloader").style.display = "none";
-    document.getElementById("root").style.display = "block";
-  }, 1500); // 3 секунды
-});
+let percent = 0;
+  const percentEl = document.getElementById('percent');
+  const preloader = document.getElementById('preloader');
+
+  const interval = setInterval(() => {
+    percent++;
+    percentEl.textContent = percent + '%';
+
+    if (percent >= 100) {
+      clearInterval(interval);
+      preloader.style.opacity = '0';
+      setTimeout(() => {
+        preloader.style.display = 'none';
+      }, 500);
+    }
+  }, 20);
